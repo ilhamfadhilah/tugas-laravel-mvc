@@ -12,20 +12,22 @@
 */
 
 
-Route::get('/', function () {
-    return view('welcome'); //bertugas untuk menampilkan sebuah tampilan php pada web welcome di views folder
-});
+// Route::get('/', function () {
+//     return view('index'); //bertugas untuk menampilkan sebuah tampilan php pada web welcome di views folder
+// });
+Route::get('/','HomeController@home');
+Route::get('/form','AuthController@register');
+Route::post('/datang','AuthController@welcome');
+// Route::get('/halo/{nama}', function ($nama) {
+//     return "halo $nama";
+// });
+// Route::get('/test', function () {
+//     return view('test'); //bertugas untuk menampilkan sebuah tampilan php pada web welcome di views folder
+// });
+// Route::get('/form', 'RegisterController@form');
 
-Route::get('/halo/{nama}', function ($nama) {
-    return "halo $nama";
-});
-Route::get('/test', function () {
-    return view('test'); //bertugas untuk menampilkan sebuah tampilan php pada web welcome di views folder
-});
-Route::get('/form', 'RegisterController@form');
+// Route::get('/sapa','RegisterController@sapa');
 
-Route::get('/sapa','RegisterController@sapa');
-
-Route::post('/sapa','RegisterController@sapa_post');
+// Route::post('/sapa','RegisterController@sapa_post');
 
 ?>
